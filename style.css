@@ -20,7 +20,7 @@ html, body {
 }
 
 html {
-  background: url(/assets/leaf/front_page_web_site_uiux_tropical_style_green_and_gold_alpha_001.png) no-repeat center center fixed;
+  background: url(/assets/leaf/background.png) no-repeat fixed;
   background-color: rgb(24, 39, 34);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -28,13 +28,34 @@ html {
   background-size: cover;
 }
 
+header {
+  background: url(/assets/leaf/background.png) no-repeat fixed;
+  background-color: rgb(24, 39, 34);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#leafGold {
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  z-index: 10;
+  max-width: 100%;
+  transform: rotate(90deg);
+  height: auto;
+  filter: drop-shadow(16px 16px 10px black);
+}
+
 #leafHeader {
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 78%;
   z-index: 10;
   max-width: 100%;
   height: auto;
+  transform: rotate(-120deg);
   filter: drop-shadow(16px 16px 10px black);
 }
 
