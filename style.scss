@@ -1,0 +1,83 @@
+
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+@mixin gold(){
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   letter-spacing: 5px;
+   font-weight: bold;
+   background-image: linear-gradient(
+	to right,
+	#462523 0,
+       	#cb9b51 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#462523 100%
+	);
+   color:transparent;
+   -webkit-background-clip:text;
+}
+
+$theme-colors: (
+    "light-green": rgb(118, 161, 53),
+    "yellow": rgb(223, 189, 56),
+    "darkGreen": rgb(24, 39, 34),
+    "gold": #DAA520,
+);
+
+html, body{
+     margin: 0;
+      padding: 0;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* { 
+    box-sizing: border-box !important; 
+}
+
+#navbar{
+    @include gold();
+}
+
+
+#leafHeader{
+    position: fixed;
+    top: 40%;
+    left: 78%;
+    z-index: 10;
+    max-width: 100%;  
+    height: auto;
+    filter: drop-shadow(16px 16px 10px black);
+
+}
+
+#presentation {
+    @include center();
+    @include gold(); 
+    opacity: 1;
+}
+
+#line{
+    border-bottom: #DAA520 solid 1px;
+}
+
+#services {
+    @include center();
+    @include gold();
+    flex-direction: column;
+}
+
+#cards{
+    @include center();
+    @include gold();
+    padding: 0 50px;
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
